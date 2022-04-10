@@ -5,8 +5,12 @@ This app is having three user types: admin, doctor, patient
 
 The operations for each usertype is limited
 
-Users/admin/doctor can create appointments (Also the availability of the doctor for the selected timeslot is checked on the front end itself)
-only admin can manage users
+1. Users/admin/doctor can create appointments (Also the availability of the doctor for the selected timeslot is checked on the front end itself)
+2. only admin can manage users and add doctors and other admins.
+3. Patients can directly register from home page
+4. Only doctor has some extra options like accept/reject/finish the appointment
+5. Admin and patient can only create/delete appointments.
+6. patient has access to only his appointments
 
 
 This app is having the most basic UI and is mostly using the laravel's default ui since it is more focused on the functionality

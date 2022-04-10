@@ -11,6 +11,7 @@ only admin can manage users
 
 This app is having the most basic UI and is mostly using the laravel's default ui since it is more focused on the functionality
 
+Some validations like selecting start and end time of the appointment are already implemented
 
 
 ○ Tech stack used, including specific libraries / versions.

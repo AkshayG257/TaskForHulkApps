@@ -5,7 +5,7 @@ use App\Models\User;
 use AUTH;
 use Illuminate\Http\Request;
 use Session;
-
+use Hash;
 class HomeController extends Controller
 {
 
@@ -50,7 +50,7 @@ class HomeController extends Controller
         $ap = new User();
         $ap->usertype = $request->usertype;
         $ap->name = $request->name;
-        $ap->password = $request->password;
+        $ap->password = Hash::make($request->password) ;
         $ap->email = $request->email;
         $ap->save();
         Session::flash('message', "Data Updated");
@@ -65,7 +65,7 @@ class HomeController extends Controller
 
             return redirect()->route('home');
         }
-        
+
         $delete = User::where('id', $request->user_id)->delete();
         Session::flash('message', "Data Updated");
 

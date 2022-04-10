@@ -5,11 +5,44 @@ This app is having three user types: admin, doctor, patient
 
 The operations for each usertype is limited
 
-Users/admin/doctor can create appointments (Also the availability of the doctor for the selected timeslot is checked on the front end itself)
-only admin can manage users
+1. Users/admin/doctor can create appointments (Also the availability of the doctor for the selected timeslot is checked on the front end itself)
+2. only admin can manage users and add doctors and other admins.
+3. Patients can directly register from home page
+4. Only doctor has some extra options like accept/reject/finish the appointment
+5. Admin and patient can only create/delete appointments.
+6. patient has access to only his appointments
 
 
-THis app is having the most basic UI and is mostly using the laravel's default ui since it is more focused on the functionality
+This app is having the most basic UI and is mostly using the laravel's default ui since it is more focused on the functionality
+
+Some validations like selecting start and end time of the appointment are already implemented
+
+
+○ Tech stack used, including specific libraries / versions.
+    Laravel Framework : 8.75 and other related dependancies (Please refere Composer.json)
+    jquery:3.6.0 (CDN IN USE)
+    Bootstrap: 4.3.1 (CDN IN USE)
+    Mysql Database 5.7 
+    php 7.4
+    
+○ Estimated time to complete your test.
+Because of the laravel's in build feautures like authentication this project was developed in minimum time span approximately 3-4 hours.
+Authentication and other functionalities are fully functional and can be utilized.
+
+
+What is pending by your side?
+1. Design Ehancementes
+2. Edit Functinality for both Appointments and Users
+3. Some minor Validations
+4. Reusabel code and functions
+
+
+○ A quick paragraph with how you approached the project, what you liked
+
+ This application is desigend and developed with keeping the end requirements in mind. The architecture is straight forward to meet the requirement. The scalability of this app with respect to both UI design and Backend Functionality is very high. Current implimentation as the most basic one to save time but can be be inhanced over time easily.
+ 
+ 
+○ Project setup guidelines
 
 Steps for Installation
 
@@ -39,5 +72,9 @@ Please clear the cache if required
 To run the application
 
 php artisan serve
+
+
+
+
 
 

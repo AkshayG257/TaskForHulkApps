@@ -36,8 +36,6 @@
 
           </div>
 
-  <br>
-
           <input type="submit" class="btn btn-success" id="submit">
         </form>
   </div>

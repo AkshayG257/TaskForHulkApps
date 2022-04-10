@@ -52,28 +52,20 @@
 
 </div>
 
-<!-- delete Appointment Modal -->
+<!-- delete User Modal -->
 <div class="modal" id="delete_user">
   <div class="modal-dialog">
     <div class="modal-content">
-
-      <!-- Modal Header -->
       <div class="modal-header">
         <h4 class="modal-title">Delete User?</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
-
-      <!-- Modal body -->
       <form action="{{route('delete_user')}}" method="post">
       @csrf
-
       <input type="hidden" class="user_id" name="user_id" value="" id="user_id">
-
       <div class="modal-footer">
-
       <button type="submit" class="btn btn-danger" >Yes</button>
-
-        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
       </div>
       </form>
     </div>

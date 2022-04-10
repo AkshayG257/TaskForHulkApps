@@ -78,7 +78,7 @@
 
 
 
-<!-- The Modal -->
+<!-- The Modals -->
 
 
 
@@ -88,24 +88,16 @@
 <div class="modal" id="delete_appointment">
   <div class="modal-dialog">
     <div class="modal-content">
-
-      <!-- Modal Header -->
       <div class="modal-header">
         <h4 class="modal-title">Delete Appintment?</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
-
-      <!-- Modal body -->
       <form action="{{route('delete_appointment')}}" method="post">
       @csrf
-
       <input type="hidden" class="appointment_id" name="appointment_id" value="" id="appointment_delete_id">
-
       <div class="modal-footer">
-
       <button type="submit" class="btn btn-danger" >Yes</button>
-
-        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
       </div>
       </form>
     </div>
@@ -116,85 +108,60 @@
 <div class="modal" id="accept_appointment">
 <div class="modal-dialog">
     <div class="modal-content">
-
-      <!-- Modal Header -->
       <div class="modal-header">
         <h4 class="modal-title">Accept Appintment?</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
-
-      <!-- Modal body -->
       <form action="{{route('accept_appointment')}}"  method="POST">
       @csrf
-
       <input type="hidden" class="appointment_id" name="appointment_id" value="" id="appointment_accept_id">
-
       <div class="modal-footer">
       <button type="submit" n class="btn btn-primary" >Yes</button>
-
-        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
       </div>
       </form>
     </div>
   </div>
 </div>
-
-
 
 <!-- Finish Appointment Modal -->
 <div class="modal" id="finish_appointment">
 <div class="modal-dialog">
     <div class="modal-content">
-
-      <!-- Modal Header -->
       <div class="modal-header">
         <h4 class="modal-title">Finish Appintment?</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
-
-      <!-- Modal body -->
       <form action="{{route('finish_appointment')}}" method="post">
       @csrf
-
       <input type="hidden" class="appointment_id" name="appointment_id" value="" id="appointment_finish_id">
-
       <div class="modal-footer">
       <button type="submit" class="btn btn-primary" >Yes</button>
-
-        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
       </div>
       </form>
     </div>
   </div>
 </div>
 
+
+<!-- Reject Appointment Modal -->
 <div class="modal" id="reject_appointment">
 <div class="modal-dialog">
     <div class="modal-content">
-
-      <!-- Modal Header -->
       <div class="modal-header">
         <h4 class="modal-title">Reject Appintment?</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
-
-      <!-- Modal body -->
       <form action="{{route('reject_appointment')}}" method="post">
           @csrf
       <input type="hidden" class="appointment_id" name="appointment_id" value="" id="appointment_reject_id">
-
       <div class="modal-footer">
       <button type="submit" class="btn btn-primary" >Yes</button>
-
-        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
       </div>
       </form>
     </div>
   </div>
 </div>
 @endsection
-
-
-<script>
-    
-</script>

@@ -8,25 +8,6 @@ use Session;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
-    {
-        return view('home');
-    }
 
     public function manage_users()
     {
@@ -46,8 +27,6 @@ class HomeController extends Controller
     {
         if(AUTH::user()->usertype == 'admin'){
 
-            
-            
             return view('add_new_user');
         }
         else{
@@ -57,6 +36,11 @@ class HomeController extends Controller
     }
     public function add_new_user_post(Request $request)
     {
+        if(AUTH::user()->usertype != 'admin'){
+
+            return redirect()->route('home');
+        }
+
         $user = AUTH::user();
         $existing_user = User::where('email', $request->email)->first();
         if($existing_user){
@@ -77,6 +61,11 @@ class HomeController extends Controller
 
     public function delete_user(Request $request)
     {
+        if(AUTH::user()->usertype != 'admin'){
+
+            return redirect()->route('home');
+        }
+        
         $delete = User::where('id', $request->user_id)->delete();
         Session::flash('message', "Data Updated");
 
